@@ -57,12 +57,6 @@ newPassword.value = randomizedPassword;
 }
 
 
-console.log(specialChars.value);
-
-
-
-
-
-// Add event listener to generate button
+// Button to bring up Modal
 generateBtn.addEventListener("click", showModal);
 
