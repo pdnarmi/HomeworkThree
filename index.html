@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class= "modal" id="myModal">
+      <div class= "modal-content">
+        <span class="close">
+          &times;
+        </span>
+        <p>Password Criteria</p>
+        <form action ="javascript:void(0);" onsubmit = "generatePassword()">
+        <label for = "passwordLength">Password Length (Between 8 and 128 characters)</label>
+        <input type = "number" id= "passwordLength" min = "8" max = "128" required><br>
+        <input type = "checkbox" id= "includeNumbers" class="form-check-input">
+        <label for = "includeNumbers" class="form-check-label">Include Numbers?</label><br>
+        <input type = "checkbox" id= "useLowerCase" class="form-check-input">
+        <label for = "useLowerCase" class="form-check-label">Include lower case characters?</label><br>
+        <input type = "checkbox" id= "useUpperCase" class="form-check-input">
+        <label for = "useUpperCase" class="form-check-label">Include upper case characters?</label><br>
+        <input type = "checkbox" id= "useSpecialChars" class="form-check-input">
+        <label for = "useSpecialChars" class="form-check-label" value="null">Include special characters?</label><br>
+        <button id= "submitbutton" type = "submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
